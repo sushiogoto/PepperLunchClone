@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   scope :api do
-    resources :lunches, only: [:index, :show, :create]
+    resources :lunches, only: [:index, :show, :create] do
+      post 'submit'   , on: :collection
+      get  'data'     , on: :collection
+    end
   end
 
+
+  # post '/api/lunches/submit' => 'lunches#submit'
+  # get '/api/lunches/data'    => 'lunches#data'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

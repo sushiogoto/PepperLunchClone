@@ -7,6 +7,12 @@ class LunchesController < ApplicationController
     @lunches = Lunch.all
   end
 
+  def submit
+  end
+
+  def data
+  end
+
   # GET /lunches/1
   # GET /lunches/1.json
   def show
