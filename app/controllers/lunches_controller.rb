@@ -5,6 +5,7 @@ class LunchesController < ApplicationController
     Lunch.destroy_all user: current_user
 
     data = params[:data]
+    debugger
     data.each_with_index do |row, row_index|
       row.each_with_index do |value, index|
 
